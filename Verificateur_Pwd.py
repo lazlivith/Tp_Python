@@ -26,7 +26,7 @@ def verifier_force_mot_de_passe():
             mot_de_passe = input("Veuillez saisir votre mot de passe : ")
 
             # Vérifier la longueur
-            longueur_valide, message_longueur = verifier_longueur(mot_de_passe)
+            longueur_valide, mot_de_passe_longueur = verifier_longueur(mot_de_passe)
 
             # Vérifier majuscule, minuscule et chiffre
             a_majuscule = contient_majuscule(mot_de_passe)
@@ -38,7 +38,7 @@ def verifier_force_mot_de_passe():
 
             # Affichage du resultat
             print("\n--- RAPPORT DE FORCE DU MOT DE PASSE ---")
-            print(f"Longueur : {message_longueur} - {'OK' if longueur_valide else 'NON'}")
+            print(f"Longueur : {mot_de_passe_longueur} - {'OK' if longueur_valide else 'NON'}")
             print(f"Contient une majuscule : {'Oui' if a_majuscule else 'Non'}")
             print(f"Contient une minuscule : {'Oui' if a_minuscule else 'Non'}")
             print(f"Contient un chiffre : {'Oui' if a_chiffre else 'Non'}")
@@ -55,3 +55,4 @@ def verifier_force_mot_de_passe():
 
 # Appel de la fonction
 verifier_force_mot_de_passe()
+
